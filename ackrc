@@ -1,0 +1,6 @@
+--type-set
+puppet=.pp
+--type-set
+json=.json
+--type-set
+erb=.erb

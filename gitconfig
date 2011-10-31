@@ -1,0 +1,9 @@
+[user]
+	name = Paul Handly
+	email = paulh@meebo-inc.com
+
+[alias]
+	forkadd = "!f() { git remote add $1 git@git.meebo-inc.com:$1/$(basename $PWD).git && git fetch $1; }; f"
+	test = !git status
+[color]
+	ui = true
