@@ -3,12 +3,7 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
-if has("gui_running")
-	colorscheme solarized
-	let g:solarized_visibility="low"
-endif
-
-set background=dark
+colorscheme zenburn
 
 syntax on
 set shiftwidth=4
@@ -27,9 +22,6 @@ set autoindent " retain indentation from line to line
 set ruler " show cursor position
 set hlsearch " hilight matches of the most recent search
 set showmatch " highlight matching parens/brackets
-"set cursorline " help me find my damn cursor
-filetype plugin indent on " Be smart about indentation
-set number " show line numbers
 set title " set window title to the relevant file
 set ignorecase " search case-insensitive by default
 set smartcase " ...unless I use caps
@@ -47,5 +39,3 @@ if exists('+colorcolumn')
 endif
 
 command W w !sudo tee % >/dev/null
-
-"let python_highlight_all = 1
