@@ -47,11 +47,6 @@ if [ "$COLORTERM" == "gnome-terminal" ]; then
 	$(infocmp gnome &>/dev/null) && export TERM=gnome
 fi
 
-# TODO: why do I have this?
-if [ "$LANG" == "en_US" ]; then
-	export LANG="en_US.UTF-8"
-fi
-
 # HISTORY
 HISTCONTROL=ignoreboth
 HISTTIMEFORMAT='[%F %T ] '
@@ -89,7 +84,7 @@ fi
 # ALIASES
 alias ll="ls -al"
 
-type -P ack-grep && alias ack="ack-grep"
+type -P ack-grep &>/dev/null && alias ack="ack-grep"
 
 # quickie timezone adjusts
 alias tzl="TZ='America/Los_Angeles'"
