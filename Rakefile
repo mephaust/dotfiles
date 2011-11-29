@@ -22,7 +22,7 @@ task :install => 'submodules' do
 end
 
 task :submodules do
-	sh %{git submodule update --rebase}
+	sh %{git submodule update --init --rebase}
 end
 
 task :default => 'install'
