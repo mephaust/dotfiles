@@ -44,7 +44,7 @@ fi
 
 # Fix for gnome-terminal
 if [ "$COLORTERM" == "gnome-terminal" ]; then
-	$(infocmp gnome &>/dev/null) && export TERM=gnome
+	$(infocmp gnome-256color &>/dev/null) && export TERM=gnome-256color
 fi
 
 # HISTORY
