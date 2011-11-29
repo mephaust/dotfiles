@@ -5,7 +5,7 @@
 require 'rake'
 
 desc "Install dotfiles"
-task :install => 'update' do
+task :install => 'submodules' do
 	Dir['*'].each do |file|
 		next if %w[Rakefile Makefile].include?(file)
 		target = "#{ENV["HOME"]}/.#{file}"
@@ -21,8 +21,8 @@ task :install => 'update' do
 	end
 end
 
-task :update do
-	sh %{git submodule update}
+task :submodules do
+	sh %{git submodule update --rebase}
 end
 
 task :default => 'install'
