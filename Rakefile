@@ -25,4 +25,8 @@ task :submodules do
 	sh %{git submodule update --init --rebase}
 end
 
+task :freshsubs do
+	sh %{git submodule foreach git pull origin master}
+end
+
 task :default => 'install'

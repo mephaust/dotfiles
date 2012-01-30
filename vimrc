@@ -1,6 +1,5 @@
 " Load up Pathogen
 call pathogen#infect()
-call pathogen#helptags()
 filetype plugin indent on
 
 colorscheme zenburn
