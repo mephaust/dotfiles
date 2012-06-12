@@ -5,10 +5,11 @@ filetype plugin indent on
 colorscheme zenburn
 
 syntax on
+
+" Indentation
 set shiftwidth=4
 set shiftround " round indentation to nearest tabstop
 set tabstop=4
-set softtabstop=4
 set noexpandtab
 
 " Listchars
