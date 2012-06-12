@@ -38,7 +38,7 @@ if [ $TERM == "nsterm-16color" ]; then
 fi
 
 # fix termcap for pre-Lion Terminal.app
-if [ "$TERM_PROGRAM" == "Apple_Terminal" ] && [ $TERM_PROGRAM_VERSION -lt 297 ]; then
+if [ "$TERM_PROGRAM" == "Apple_Terminal" ] && [ ${TERM_PROGRAM_VERSION%%.*} -lt 297 ]; then
 	export TERM=nsterm-16color
 fi
 
